@@ -58,3 +58,11 @@ li {
   line-height: 18px;
   margin-bottom: 12px;
 }
+.searchbutton {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 2px dotted #e3e3e3;
+}

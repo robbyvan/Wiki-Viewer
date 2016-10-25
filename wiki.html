@@ -3,14 +3,16 @@
 <head>
   <title>Wikipedia Search</title>
   <link rel="stylesheet" type="text/css" href="wiki.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="wiki.js"></script>
 </head>
 <body>
   <h1>Wikipedia Search</h1>
   <h2>by Robby</h2>
-  <a class="roam" href="#">Roam</a>
-  <form action="#">
-    <input class="input" type="text" name="content" placeholder="想知道什么?" />
-    <input class="submit" type="submit" name="submit" />
+  <a class="roam" href="http://en.wikipedia.org/wiki/Special:Random">Roam</a>
+  <form>
+    <input class="tosearch" type="text" name="tosearch" placeholder="想知道什么?" />
+    <p class="searchbutton">Go</p>
   </form>
 </body>
 </html>
