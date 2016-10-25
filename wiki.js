@@ -29,5 +29,20 @@ $(document).ready(function(){
 
     console.log(o);//json2 JS object
 
+    // Using jQuery
+    $.ajax({
+      url: "http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch='" + o.value,
+      data: queryData,
+      dataType: 'json',
+      type: 'GET',
+      headers: { 'Api-User-Agent': 'Example/1.0' },
+      success: function(data) {
+         console.log(data);
+      },
+      error: function(err){
+        console.log(err);
+      }
+    });
+
   });
 });
