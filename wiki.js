@@ -5,6 +5,6 @@ $(document).ready(function(){
   });//open a new tab when clicked
 
   $(".searchbutton").on("click", function(event){
-    console.log($(".tosearch").serialize());
+    console.log($(".tosearch").serializeArray());
   });
 });
