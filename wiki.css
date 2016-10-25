@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*Global Styles*/
+html, body, div, section, aside, header, footer， nav, h1, h2, h3, h4, h5, h6, p, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+}
+/*html display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, section, summary{
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+html {
+  background: #fff;
+}
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  line-height: 1.5;
+  position: relative;
+  background-color: #fff;
+  font-weight: 400;
+  font-style: normal;
+}
+/*::selection {
+  background-color: #FF8B80;
+  color: #FFF;
+  text-shadow: none;
+}*/
+header ul {
+  list-style: none;
+}
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+ul, ol {
+  margin-bottom: 20px;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+/**/
+
+li {
+  line-height: 18px;
+  margin-bottom: 12px;
+}
