@@ -10,7 +10,7 @@ $(document).ready(function(){
     // Using jQuery
 
     $.ajax({
-      url: "http://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + title +"&format=json&exintro=1",
+      url: "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + title +"&format=json&exintro=1",
       type: "GET",
       dataType: "json",
       jsonp: "jsonpCallback",
