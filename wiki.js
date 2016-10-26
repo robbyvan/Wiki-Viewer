@@ -4,7 +4,7 @@ $(document).ready(function(){
     window.open($(this).attr("href"));//open a new tab when clicked
   });
 
-  $(".searchbutton").on("click", function(event){
+  $(".discover").on("click", function(event){
     var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
     // Using jQuery
