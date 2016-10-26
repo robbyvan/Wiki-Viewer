@@ -10,7 +10,7 @@ $(document).ready(function(){
     // Using jQuery
 
     $.ajax({
-      url: "http://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + title +"&format=json&exintro=1",
+      url: 'http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=' + title,
       type: "GET",
       dataType: "jsonp",
       headers: { 'Api-User-Agent': 'Example/1.0' },
@@ -18,7 +18,7 @@ $(document).ready(function(){
       jsonpCallback:"flightHandler",
       success: function(r) {
         console.log("request succeeded");
-        console.log(r);
+        console.log(r.query);
       },
       error: function(e) {
         console.log(e);
