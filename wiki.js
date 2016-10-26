@@ -19,7 +19,7 @@ $(document).ready(function(){
       success: function(r) {
         console.log("request succeeded");
         console.log(r.query);
-        displayResults(r);
+        displayResults(r.query);//should pass r.query instead of r
       },
       error: function(e) {
         console.log(e);
