@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 function displayResults(data) {
   var list = $("<ul name='results'></ul>");
-  $(data).each(function(key, element){
+  $.each(data, function(key, element){
     var linkElem = $("<a name='" + key +"' href='http://en.wikipedia.org/?curid=" + key + "'></a>");
     $("<h1>" + element.title + "</h1><p>" + element.extract + "</p>").appendTo(linkElem);
     $(linkElem).appendTo(list);
