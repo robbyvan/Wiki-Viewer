@@ -35,5 +35,5 @@ function displayResults(data) {
     $("<h1>" + element.title + "</h1><p>" + element.extract + "</p>").appendTo(linkElem);
     $(linkElem).appendTo(list);
   });
-  $(list).appendTo(".displayZone");
+  $(list).appendTo(".displayzone");
 }
