@@ -1,68 +1,72 @@
 @charset "UTF-8";
-/*Global Styles*/
-html, body, div, section, aside, header, footer， nav, h1, h2, h3, h4, h5, h6, p, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr{
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
+*{
   margin: 0;
   padding: 0;
-  border: 0;
+  list-style: none;
   vertical-align: baseline;
-  font: inherit;
-}
-/*html display rule*/
-address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, section, summary{
-  display: block;
+  text-decoration: none;
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: #C9C59A;
 }
-html {
-  background: #fff;
+h1, h2, h3 {
+  font-size: 18pt;
 }
-body {
-  font-family: sans-serif;
-  margin: 0 auto;
-  line-height: 1.5;
-  position: relative;
-  background-color: #fff;
-  font-weight: 400;
-  font-style: normal;
-}
-/*::selection {
-  background-color: #FF8B80;
-  color: #FFF;
-  text-shadow: none;
-}*/
-header ul {
-  list-style: none;
-}
-strong {
-  font-weight: 600;
-}
-em {
-  font-style: italic;
-}
-img {
-  border: 0;
-  vertical-align: middle;
-}
-ul, ol {
-  margin-bottom: 20px;
-  padding: 0;
+
+html{
+  font-size: 18px;
+  font-family: Arial, sans-serif;
   margin: 0;
-  margin-left: 20px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #DBEFFF;
+  color: #C9C59A;
 }
-
-/**/
-
-li {
-  line-height: 18px;
-  margin-bottom: 12px;
-}
-.searchbutton {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+.inputzone {
+  margin: 18% auto;
   text-align: center;
-  border: 2px dotted #e3e3e3;
+}
+.inputzone h1 {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+}
+.inputzone h2 {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 100;
+  padding-bottom: 5px;
+}
+form input {
+  margin: 10px auto;
+  width: 300px;
+  font-size: 1.2em;
+  font-weight: 200;
+  height: 40px;
+  text-align: center;
+  ft
+}
+.roam {
+  margin-left: 30px;
+}
+.button {
+  display: inline;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 6px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #e3e3e3;
+}
+.displayzone {
+  font-size: 14pt;
+  font-family: helvetica, Arial, sans-serif;
+}
+li h1 {
+  font-weight: 100;
 }

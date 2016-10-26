@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   $(".searchbutton").on("click", function(event){
-    var fields = $(".tosearch").serializeArray();
+    var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
     // Using jQuery
 
@@ -32,7 +32,7 @@ function displayResults(data) {
   var list = $("<ul name='results'></ul>");
   $.each(data, function(key, element){
     var linkElem = $("<a name='" + key +"' href='http://en.wikipedia.org/?curid=" + key + "'></a>");
-    $("<h1>" + element.title + "</h1><p>" + element.extract + "</p>").appendTo(linkElem);
+    $("<li><h1>" + element.title + "</h1><p>" + element.extract + "</p></li>").appendTo(linkElem);
     $(linkElem).appendTo(list);
   });
   $(list).appendTo(".displayzone");
