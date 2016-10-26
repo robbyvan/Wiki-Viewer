@@ -5,6 +5,7 @@ $(document).ready(function(){
   });
 
   $(".discover").on("click", function(event){
+    $(".displayzones").empty();
     var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
     // Using jQuery
