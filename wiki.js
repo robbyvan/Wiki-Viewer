@@ -13,6 +13,7 @@ $(document).ready(function(){
       url: "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + title +"&format=json&exintro=1",
       type: "GET",
       dataType: "json",
+      headers: { 'Api-User-Agent': 'robby/1.0' },
       jsonp: "jsonpCallback",
       success: function(r) {
         console.log(r);
