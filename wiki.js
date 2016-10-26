@@ -10,12 +10,14 @@ $(document).ready(function(){
     // Using jQuery
 
     $.ajax({
-      url: "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + title +"&format=json&exintro=1",
+      url: "http://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + title +"&format=json&exintro=1",
       type: "GET",
-      dataType: "json",
-      headers: { 'Api-User-Agent': 'robby/1.0' },
-      jsonp: "jsonpCallback",
+      dataType: "jsonp",
+      headers: { 'Api-User-Agent': 'Example/1.0' },
+      jsonp: "callback",
+      jsonpCallback:"flightHandler",
       success: function(r) {
+        console.log("request succeeded");
         console.log(r);
       },
       error: function(e) {
