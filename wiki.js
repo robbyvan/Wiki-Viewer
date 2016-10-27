@@ -5,12 +5,28 @@ $(document).ready(function(){
   });
 
   $(".discover").on("click", function(event){
-    showResults();
+    var fields = $(".searcharea").serializeArray();
+    var title = fields[0].value;
+    if (title !== "" || $("#displayzone").children().length !== 0){
+      if (title === "") {
+        $("#displayzone").empty();
+      }else {
+        showResults(title);  
+      }
+    }
   });//if clicked Discover button
 
   $(document).keypress(function(event){
     if (event.which === 13) {
-      showResults();
+      var fields = $(".searcharea").serializeArray();
+      var title = fields[0].value;
+      if (title !== "" || $("#displayzone").children().length !== 0){
+        if (title === "") {
+          $("#displayzone").empty();
+       }else {
+         showResults(title);  
+        }
+    }
     }
   });// if pressed enter
 
@@ -20,11 +36,8 @@ $(document).ready(function(){
   });// automatically scroll down to the results area
 });
 
-function showResults(){
-  $("#displayzone").empty();
-    var fields = $(".searcharea").serializeArray();
-    var title = fields[0].value;//get user input
-    
+function showResults(title){
+    $("#displayzone").empty();
     // Use JSONP to get data
     $.ajax({
       url: 'http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=' + title,
