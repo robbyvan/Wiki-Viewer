@@ -21,10 +21,9 @@ $(document).ready(function(){
         console.log("request succeeded");
         console.log(r.query);
         displayResults(r.query.pages);//should pass r.query.pages instead of r or r.query
-        scrollDown();
       },
       error: function(e) {
-        $("<p class='errmsg'>Sorry, an error occurs.</p>")
+        $("<p class='errmsg'>Sorry, an error occurs.</p>").appendTo("#displayzone");
       }
     });
   });
@@ -42,7 +41,6 @@ function displayResults(data) {
 
 function scrollDown(event){
   event.preventDefault();
-
   $("html body").animate({scrollTop: $("#displayzone").offset().top}, 1000);
   return false;
 }
