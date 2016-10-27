@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   $(".discover").on("click", function(event){
-    $(".displayzone").empty();
+    $("#displayzone").empty();
     var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
     // Use JSONP to get data
