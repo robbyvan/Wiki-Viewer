@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   $(".discover").on("click", function(event){
-    // scrollDown(event);
+    scrollDown(event);
     $(".displayzone").empty();
     var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
@@ -36,7 +36,7 @@ function displayResults(data) {
     $("<li><h1>" + element.title + "</h1><p>" + element.extract + "</p></li>").appendTo(linkElem);
     $(linkElem).appendTo(list);
   });
-  $(list).appendTo(".displayzone");
+  $(list).appendTo("#displayzone");
 }
 
 function scrollDown(event){
