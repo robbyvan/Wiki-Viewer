@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   $(".discover").on("click", function(event){
-    scrollDown(event);
+    // scrollDown(event);
     $(".displayzone").empty();
     var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
@@ -16,7 +16,7 @@ $(document).ready(function(){
       dataType: "jsonp",
       headers: { 'Api-User-Agent': 'Example/1.0' },
       jsonp: "callback",
-      jsonpCallback:"?",
+      jsonpCallback:"callbackFunciton",
       success: function(r) {
         console.log("request succeeded");
         console.log(r.query);
