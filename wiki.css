@@ -25,16 +25,16 @@ html{
   background: #DBEFFF;
   color: #C9C59A;
 }
-.inputzone {
+#inputzone {
   margin: 18% auto;
   text-align: center;
 }
-.inputzone h1 {
+#inputzone h1 {
   font-family: "Raleway", Arial, sans-serif;
   font-size: 3em;
   font-weight: normal;
 }
-.inputzone h2 {
+#inputzone h2 {
   font-family: "Raleway", Arial, sans-serif;
   font-size: 1.3em;
   font-weight: 100;
@@ -63,10 +63,27 @@ form input {
   text-align: center;
   border: 2px solid #e3e3e3;
 }
-.displayzone {
+#displayzone {
   font-size: 14pt;
   font-family: helvetica, Arial, sans-serif;
-}
-li h1 {
   font-weight: 100;
 }
+#displayzone h1 {
+  font-family: "Raleway", sans-serif;
+}
+#displayzone ul {
+  padding: 1%;
+}
+#displayzone li{
+  margin: 30px;
+  padding: 16px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#displayzone li:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/*.rawsource {
+  opacity: 0.5;
+}*/
