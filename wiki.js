@@ -3,7 +3,7 @@ $(document).ready(function(){
     event.preventDefault();
     window.open($(this).attr("href"));//open a new tab when clicked
   });
-
+ 
   $(".discover").on("click", function(event){
     $("#displayzone").empty();
     var fields = $(".searcharea").serializeArray();
