@@ -53,7 +53,7 @@ function showResults(title){
           $("<p class='errmsg'>Sorry, page '" + title +"' does not exists</p>").appendTo("#displayzone");
         }else {
           displayResults(r.query.pages);//should pass r.query.pages instead of r or r.query
-          scrollDown(event);
+          scrollDown();
         } 
       },
       error: function(e) {
@@ -73,8 +73,8 @@ function displayResults(data) {
   $(list).appendTo("#displayzone");
 }
 
-function scrollDown(event){
-  event.preventDefault();
-  $("html body").animate({scrollTop: $("#displayzone").offset().top}, 1000);
-  return false;
+function scrollDown(){
+  // event.preventDefault();
+  $("html, body").animate({scrollTop: $("#displayzone").offset().top}, 1000);
+  // return false;
 }
