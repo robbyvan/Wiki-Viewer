@@ -5,7 +5,6 @@ $(document).ready(function(){
   });
 
   $(".discover").on("click", function(event){
-    scrollDown(event);
     $(".displayzone").empty();
     var fields = $(".searcharea").serializeArray();
     var title = fields[0].value;
@@ -21,6 +20,7 @@ $(document).ready(function(){
         console.log("request succeeded");
         console.log(r.query);
         displayResults(r.query.pages);//should pass r.query.pages instead of r or r.query
+        scrollDown(event);
       },
       error: function(e) {
         $("<p class='errmsg'>Sorry, an error occurs.</p>").appendTo("#displayzone");
