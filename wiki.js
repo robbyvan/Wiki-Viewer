@@ -27,6 +27,10 @@ $(document).ready(function(){
       }
     });
   });
+  $("#displayzone").on("click", "a", function(event){
+    event.preventDefault();
+    window.open($(this).attr("href"));//open a new tab when clicked
+  });
 });
 
 function displayResults(data) {
