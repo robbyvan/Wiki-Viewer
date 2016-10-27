@@ -49,8 +49,12 @@ function showResults(title){
       success: function(r) {
         console.log("request succeeded");
         // console.log(r.query);
-        displayResults(r.query.pages);//should pass r.query.pages instead of r or r.query
-        scrollDown(event);
+        if (!r.hasOwnProperty("query")) {
+          $("<p class='errmsg'>Sorry, page '" + title +"' does not exists</p>").appendTo("#displayzone");
+        }else {
+          displayResults(r.query.pages);//should pass r.query.pages instead of r or r.query
+          scrollDown(event);
+        } 
       },
       error: function(e) {
         $("#displayzone").empty();
