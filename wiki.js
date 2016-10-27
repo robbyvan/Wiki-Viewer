@@ -3,11 +3,28 @@ $(document).ready(function(){
     event.preventDefault();
     window.open($(this).attr("href"));//open a new tab when clicked
   });
- 
+
   $(".discover").on("click", function(event){
-    $("#displayzone").empty();
+    showResults();
+  });//if clicked Discover button
+
+  $(document).keypress(function(event){
+    if (event.which === 13) {
+      showResults();
+    }
+  });// if pressed enter
+
+  $("#displayzone").on("click", "a", function(event){
+    event.preventDefault();
+    window.open($(this).attr("href"));//open a new tab when clicked
+  });// automatically scroll down to the results area
+});
+
+function showResults(){
+  $("#displayzone").empty();
     var fields = $(".searcharea").serializeArray();
-    var title = fields[0].value;
+    var title = fields[0].value;//get user input
+    
     // Use JSONP to get data
     $.ajax({
       url: 'http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=' + title,
@@ -15,23 +32,19 @@ $(document).ready(function(){
       dataType: "jsonp",
       headers: { 'Api-User-Agent': 'Example/1.0' },
       jsonp: "callback",
-      jsonpCallback:"callbackFunciton",
+      jsonpCallback: "callbackFunction",
       success: function(r) {
         console.log("request succeeded");
-        console.log(r.query);
+        // console.log(r.query);
         displayResults(r.query.pages);//should pass r.query.pages instead of r or r.query
         scrollDown(event);
       },
       error: function(e) {
-        $("<p class='errmsg'>Sorry, an error occurs.</p>").appendTo("#displayzone");
+        $("#displayzone").empty();
+        $("<p class='errmsg'>Sorry, AJAX failed</p>").appendTo("#displayzone");
       }
     });
-  });
-  $("#displayzone").on("click", "a", function(event){
-    event.preventDefault();
-    window.open($(this).attr("href"));//open a new tab when clicked
-  });
-});
+}
 
 function displayResults(data) {
   var list = $("<ul class='results'></ul>");
